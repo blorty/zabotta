@@ -2,13 +2,14 @@ import React from 'react';
 import './App.css';
 import styled, { ThemeProvider } from 'styled-components';
 
-import Navbar from './components/Navbar/NavbarRender';
-import Home from './components/Home/HomeRender';
-import Footer from './components/Footer/FooterRender';
+import { mainTheme } from './CustomColors';
 
+import NavbarRender from './components/Navbar/NavbarRender';
+import HomeRender from './components/Home/HomeRender';
+import FooterRender from './components/Footer/FooterRender';
 
 const Container = styled.div`
-  background: ${({ theme }) => theme.bg};
+  background: ${({ theme }) => theme.bgDune};
   width: 100%;
   overflow-x: hidden;
 `
@@ -17,14 +18,15 @@ const Container = styled.div`
 //   flex-grow: 1; 
 // `
 
+
 function App() {
 
   return (
-    <ThemeProvider>
-      <Navbar />
+    <ThemeProvider theme={mainTheme}>
+      <NavbarRender />
       <Container>
-        <Home />
-        <Footer />
+        <HomeRender />
+        <FooterRender />
       </Container>
     </ThemeProvider>
   )

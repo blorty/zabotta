@@ -1,29 +1,57 @@
 import React from "react";
+import { motion } from 'framer-motion'; // Import motion
+import { ZabottaData } from "../../ZabottaData/ZabottaData";
 import { FooterContainer, Footer, FooterLink, FooterWrapper, Logo, SocialMediaIcon, SocialMediaIcons, Copyright } from "./FooterStyled";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
+const footerVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: {
+        opacity: 1,
+        scale: 1,
+        transition: { 
+            when: "beforeChildren",
+            staggerChildren: 0.05,
+        },
+    },
+};
+
+const linkVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+};
+
+const iconVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+};
 
 const FooterRender = () => {
     return (
         <FooterContainer>
             <FooterWrapper>
                 <Logo>Logo</Logo>
-                <Footer>
-                    <FooterLink href="/">Home</FooterLink>
-                    <FooterLink href="/about">About</FooterLink>
-                    <FooterLink href="/contact">Contact</FooterLink>
-                    <FooterLink href="/blog">Blog</FooterLink>
+                <Footer as={motion.div} variants={footerVariants} initial="hidden" animate="visible">
+                    <FooterLink as={motion.a} variants={linkVariants} href="/about" whileHover={{ scale: 1.25 }}>About</FooterLink>
+                    <FooterLink as={motion.a} variants={linkVariants} href="/services" whileHover={{ scale: 1.25 }}>Services</FooterLink>
+                    <FooterLink as={motion.a} variants={linkVariants} href="/contact" whileHover={{ scale: 1.25 }}>Contact</FooterLink>
+                    <FooterLink as={motion.a} variants={linkVariants} href="/blog" whileHover={{ scale: 1.25 }}>Blog</FooterLink>
                 </Footer>
                 <SocialMediaIcons>
-                    <SocialMediaIcon href="https://www.facebook.com/">
-                        <i className="fab fa-facebook-f"></i>
+                    <SocialMediaIcon
+                        as={motion.a} variants={iconVariants} initial="hidden" animate="visible"
+                        href={ZabottaData.facebook} 
+                        target="_blank" 
+                        whileHover={{ scale: 1.25 }}>
+                            <FacebookIcon />
                     </SocialMediaIcon>
-                    <SocialMediaIcon href="https://www.instagram.com/">
-                        <i className="fab fa-instagram"></i>
-                    </SocialMediaIcon>
-                    <SocialMediaIcon href="https://www.twitter.com/">
-                        <i className="fab fa-twitter"></i>
-                    </SocialMediaIcon>
-                    <SocialMediaIcon href="https://www.youtube.com/">
-                        <i className="fab fa-youtube"></i>
+                    <SocialMediaIcon
+                        as={motion.a} variants={iconVariants} initial="hidden" animate="visible" 
+                        href={ZabottaData.instagram} 
+                        target="_blank" 
+                        whileHover={{ scale: 1.25 }}>
+                            <InstagramIcon />
                     </SocialMediaIcon>
                 </SocialMediaIcons>
                 <Copyright>
