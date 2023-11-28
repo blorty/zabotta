@@ -82,3 +82,39 @@ export const ZabottaServices = {
         },
     ]
 }
+
+
+export const ZabottaProjects = {
+    projects: [
+        {
+            id: 1,
+            title: "Project 1",
+            description: "This is a description of project 1",
+            image: "https://images.unsplash.com/photo-1612838443371-1a0e4a6c1b4e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29vZHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+        },
+        {
+            id: 2,
+            title: "Project 2",
+            description: "This is a description of project 2",
+            image: "https://images.unsplash.com/photo-1612838443371-1a0e4a6c1b4e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29vZHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+        },
+        {
+            id: 3,
+            title: "Project 3",
+            description: "This is a description of project 3",
+            image: "https://images.unsplash.com/photo-1612838443371-1a0e4a6c1b4e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29vZHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+        },
+        {
+            id: 4,
+            title: "Project 4",
+            description: "This is a description of project 4",
+            image: "https://images.unsplash.com/photo-1612838443371-1a0e4a6c1b4e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29vZHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+        },
+        {
+            id: 5,
+            title: "Project 5",
+            description: "This is a description of project 5",
+            image: "https://images.unsplash.com/photo-1612838443371-1a0e4a6c1b4e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d29vZHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+        },
+    ]
+}
