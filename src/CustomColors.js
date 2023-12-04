@@ -41,6 +41,10 @@ export const mainTheme = {
     bgGraphite: "#292929",
     textGraphite: "#292929",
 
+    // Stone White (mortar)
+    bgStone: "#EDEBE8",
+    textStone: "#EDEBE8",
+
     white:"#FFFFFF",
     black:"#000000",
     success:"#2ecc71",

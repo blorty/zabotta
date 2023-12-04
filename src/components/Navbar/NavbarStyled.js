@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const NavStyled = styled.div`
-    background-color: ${({theme}) => theme.bgAquaLight};
+    background-color: ${({theme}) => theme.bgStone};
+    backdrop-filter: blur(10px);
+    background-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     height: 80px;
     display: flex;
     align-items: center;
