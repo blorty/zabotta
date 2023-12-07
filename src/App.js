@@ -4,9 +4,9 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import { mainTheme } from './CustomColors';
 
-import NavbarRender from './components/Navbar/NavbarRender';
-import HomeRender from './components/Home/HomeRender';
-import FooterRender from './components/Footer/FooterRender';
+import NavbarRender from './components/NavbarRender';
+import HomeRender from './components/HomeRender';
+import FooterRender from './components/FooterRender';
 
 const Container = styled.div`
   background: ${({ theme }) => theme.bgDune};
@@ -14,12 +14,7 @@ const Container = styled.div`
   overflow-x: hidden;
 `
 
-// const Wrapper = styled.div`
-//   flex-grow: 1; 
-// `
-
-
-function App() {
+const App = () => {
 
   return (
     <ThemeProvider theme={mainTheme}>
@@ -29,7 +24,7 @@ function App() {
         <FooterRender />
       </Container>
     </ThemeProvider>
-  )
-}
+  );
+};
 
 export default App;

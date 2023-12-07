@@ -1,7 +1,7 @@
 import React from "react";
+import styled from "styled-components";
 import { motion } from 'framer-motion'; // Import motion
-import { ZabottaData } from "../../ZabottaData/ZabottaData";
-import { FooterContainer, Footer, FooterLink, FooterWrapper, Logo, SocialMediaIcon, SocialMediaIcons, Copyright } from "./FooterStyled";
+import { ZabottaData } from "../ZabottaData/ZabottaData";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
@@ -26,6 +26,83 @@ const iconVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
 };
+
+const FooterContainer = styled(motion.div)`
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    background: ${({ theme }) => theme.bgSalmonLight};
+`;
+
+const FooterWrapper = styled(motion.footer)`
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    padding: 1rem;
+    color: ${({ theme }) => theme.bgGrassLightest}; 
+`;
+
+const Logo = styled(motion.h1)`
+    font-weight: 600;
+    font-size: 20px;
+    color: ${({ theme }) => theme.bgAquaDark};
+`;
+
+const Footer = styled(motion.footer)`
+    width: 100%;
+    max-width: 800px;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    @media (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+    }
+`;
+
+const FooterLink = styled(motion.a)`
+    color: ${({ theme }) => theme.bgGrassLightest}; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+        color: ${({ theme }) => theme.bgAquaMedium}; 
+    }
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+`;
+
+const SocialMediaIcons = styled(motion.div)`
+    display: flex;
+    margin-top: 0.5rem;
+`;
+const SocialMediaIcon = styled(motion.a)`
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    color: ${({ theme }) => theme.bgGrassLightest}; 
+    transition: color 0.2s ease-in-out;
+    &:hover {
+        color: ${({ theme }) => theme.bgAquaMedium}; 
+    }
+`;
+
+const Copyright = styled(motion.p)`
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: ${({ theme }) => theme.bgGrassLightest}; 
+    text-align: center;
+`;
 
 const FooterRender = () => {
     return (
