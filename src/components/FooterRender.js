@@ -28,8 +28,9 @@ const iconVariants = {
 };
 
 const FooterContainer = styled(motion.div)`
+    font-family: 'TitleFont', sans-serif;
     width: 100%;
-    padding: 2rem 0;
+    padding: 0 30px;
     display: flex;
     justify-content: center;
     background: ${({ theme }) => theme.bgSalmonLight};
@@ -71,6 +72,7 @@ const Footer = styled(motion.footer)`
 
 const FooterLink = styled(motion.a)`
     color: ${({ theme }) => theme.bgGrassLightest}; 
+    padding: 0 30px;
     text-decoration: none;
     font-size: 1.2rem;
     transition: color 0.2s ease-in-out;
