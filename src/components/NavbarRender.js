@@ -79,7 +79,7 @@ const navListVariants = {
         opacity: 1,
         transition: {
             staggerChildren: 0.15,
-            delayChildren: 2
+            delayChildren: 1
         }
     }
 };
