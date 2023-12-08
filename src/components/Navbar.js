@@ -8,7 +8,7 @@ const NavStyled = styled.div`
     background-color: ${({theme}) => theme.bgStone};
     backdrop-filter: blur(10px);
     background-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    height: 80px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@ const NavContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 40px;
     width: 100%;
     padding: 0 24px;
     max-width: 1200px;
@@ -65,6 +65,7 @@ const NavLink = styled(motion.a)`
     padding: 0 30px;
     height: 100%;
     cursor: pointer;
+    font-size: 1.2rem;
     font-weight: bold; // Make the font bold
     transition: color 0.2s ease-in-out;
 

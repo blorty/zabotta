@@ -114,7 +114,7 @@ const AnimatedTitle = ({ title }) => {
 // Page container variants
 const containerVariants = {
     initial: { 
-        y: '100vh', // Start above the screen
+        y: '240vh', // Start above the screen
         opacity: 0
     },
     animate: { 
@@ -122,11 +122,11 @@ const containerVariants = {
         opacity: 1,
         transition: {
             ease: "easeOut",
-            duration: 0.5
+            duration: 0.7
         }
     },
     exit: {
-        y: '-100vh', // Move up and out of the screen
+        y: '-200vh', // Move up and out of the screen
         opacity: 0,
         transition: {
             ease: "easeOut",

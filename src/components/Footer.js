@@ -110,7 +110,7 @@ const FooterRender = () => {
     return (
         <FooterContainer>
             <FooterWrapper>
-                <Logo>Logo</Logo>
+                {/* <Logo>Logo</Logo> */}
                 <Footer as={motion.div} variants={footerVariants} initial="hidden" animate="visible">
                     <FooterLink as={motion.a} variants={linkVariants} href="/about" whileHover={{ scale: 1.25 }}>About</FooterLink>
                     <FooterLink as={motion.a} variants={linkVariants} href="/services" whileHover={{ scale: 1.25 }}>Services</FooterLink>

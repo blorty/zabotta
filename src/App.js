@@ -7,9 +7,9 @@ import './App.css';
 
 import { mainTheme } from './CustomColors';
 
-import NavbarRender from './components/NavbarRender';
-import HomeRender from './components/HomeRender';
-import FooterRender from './components/FooterRender';
+import NavbarRender from './components/Navbar';
+import HomeRender from './components/Home';
+import FooterRender from './components/Footer';
 
 const Container = styled.div`
   background: ${({ theme }) => theme.bgDune};
