@@ -32,7 +32,7 @@ const AnimatedLetter = styled(motion.span)`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 8vw; // Adjust the font size to be smaller
+    font-size: 12vw; // Adjust the font size to be smaller
     line-height: 1;
     margin: 0 0.5vw; // Adds spacing between letters
     drop-shadow: 1px 1px; // Adjust the x, y offset and color for the desired effect
@@ -79,7 +79,7 @@ const titleContainerVariants = {
     },
     exit: {
         transition: {
-            staggerChildren: 0.2,
+            staggerChildren: 0.25,
             staggerDirection: 1, // Animate out from last letter to first
             when: "afterChildren" // Ensure exit animations start after the children have finished animating in
         }

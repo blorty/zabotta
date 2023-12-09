@@ -39,7 +39,7 @@ const NavLogo = styled(LinkR)`
     text-decoration: none;
     filter: invert(100%);
     @media (max-width: 640px) {
-        left: 10px; // Adjust for smaller screens if necessary
+        left: 10px;
     }
 `;
 
@@ -54,7 +54,7 @@ const NavItems = styled(motion.ul)`
     position: relative;
     flex: 1;
     @media screen and (max-width: 768px) {
-        display: none;
+        gap: 10px;
     }
 `;
 const NavLink = styled(motion.a)`
@@ -67,10 +67,14 @@ const NavLink = styled(motion.a)`
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: bold; // Make the font bold
+    user-select: none;
     transition: color 0.2s ease-in-out;
-
     &:hover {
         color: ${({ theme }) => theme.bgSalmonLight};
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0 10px;
+        font-size: 12px;
     }
 `;
 
@@ -79,19 +83,19 @@ const navListVariants = {
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.15,
+            staggerChildren: 0.215,
             delayChildren: 1
         }
     }
 };
 
 const navItemVariants = {
-    hidden: { y: 40, opacity: 0 },
+    hidden: { y: 50, opacity: 0 },
     visible: { 
         y: 0, 
         opacity: 1, 
         stiffness: 25,
-        transition: { ease: "easeInOut", duration: 1.25 } 
+        transition: { ease: "easeInOut", duration: 1 } 
     }
 };
 

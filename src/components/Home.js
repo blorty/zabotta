@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import Headshot from '../Images/HS2.png';
+import Headshot from '../Images/hs3.png';
 
 // Page container
 const HomeContainer = styled(motion.div)`
@@ -14,6 +14,14 @@ const HomeContainer = styled(motion.div)`
     background-color: ${({ theme }) => theme.bgStone};
     height: calc(100vh - 40px); // Subtracting the top and bottom padding
     overflow: hidden; // Prevents any child content from causing overflow
+    @media (max-width: 576px) and (orientation: landscape) {
+        height: calc(100vh - 20px);
+    }
+
+    @media (max-width: 768px) and (orientation: landscape) {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+    }
 `;
 
 // Section container
@@ -23,6 +31,9 @@ const Section = styled(motion.section)`
     flex-direction: column;
     align-items: center;
     background-color: ${({ theme }) => theme.bgStone};
+    @media (max-width: 768px) {
+        padding: 30px 20px;
+    }
 `;
 
 // Header text container
@@ -43,6 +54,11 @@ const HeaderTextContainer = styled(motion.div)` // Changed to motion.div
     user-select: none; // Prevent text selection
     overflow: hidden; // Added to prevent overflow issues
     text-shadow: 1px 1px 15px rgba(0,0,0,0.5); // Adjust color and opacity as needed
+    @media (max-width: 430px) {
+        font-size: 16vw; // Slightly larger to fill width but not height
+        top: 5vh;
+        transform: scaley(2.8);
+    }
 
 `;
 
@@ -63,7 +79,10 @@ const HeaderFooterContainer = styled(motion.div)`
     cursor: default; // Prevent the cursor from changing to a text selection cursor
     user-select: none; // Prevent text selection
     overflow: hidden; // Added to prevent overflow issues
-    text-shadow: 1px 1px 15px rgba(0,0,0,0.5); // Adjust color and opacity as needed
+    text-shadow: 1px 1px 15px rgba(0,0,0,0.5);
+    @media (max-width: 430px) {
+        font-size: 16vw; // Slightly larger to fill width but not height
+    }
 `;
 
 // Headshot container
@@ -73,7 +92,14 @@ const HeadshotContainer = styled.div`
     height: auto;
     overflow: hidden;
     z-index: 2;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    user-select: none;
+
+    @media (max-width: 430px) {
+        max-width: 100%; 
+        img {
+            object-fit: cover;
+            object-position: center; 
+        }
 `;
 
 
@@ -101,7 +127,7 @@ const headerFooterVariants = {
 const headshotVariants = {
     hidden: { 
       y: '-100vh', // Start below the screen
-      scale: 5, // Start scaled down
+      scale: 4, // Start scaled down
       opacity: 0, // Start invisible
     },
     visible: { 
@@ -117,6 +143,15 @@ const headshotVariants = {
     },
 };
 
+const headshotHoverVariants = {
+    hover: {
+        scale: 1.025, // Adjust the scale value as needed
+        transition: {
+            duration: 0.2, // Duration of the scaling animation
+            ease: "easeInOut"
+        }
+    }
+};
 
 // HomePage component
 const HomePage = () => {
@@ -156,8 +191,10 @@ const HomePage = () => {
                 src={Headshot}
                 alt="Headshot"
                 variants={headshotVariants}
+                // variants={headshotHoverVariants}
                 initial="hidden"
                 animate="visible"
+                whileHover="hover"
             />
             </HeadshotContainer>
         )}
