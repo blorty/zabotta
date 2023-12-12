@@ -191,7 +191,6 @@ const HomePage = () => {
                 src={Headshot}
                 alt="Headshot"
                 variants={headshotVariants}
-                // variants={headshotHoverVariants}
                 initial="hidden"
                 animate="visible"
                 whileHover="hover"

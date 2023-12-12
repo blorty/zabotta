@@ -1,3 +1,13 @@
+import left1 from "../Images/11.jpg";
+import left2 from "../Images/12.jpg";
+import left3 from "../Images/13.jpg";
+import middle1 from "../Images/21.jpg";
+import middle2 from "../Images/22.jpg";
+import middle3 from "../Images/23.jpg";
+import right1 from "../Images/31.jpg";
+import right2 from "../Images/32.jpg";
+import right3 from "../Images/33.jpg";
+
 export const ZabottaData = {
     name: "Zabotta Studio",
     description: "Zabotta Studio is a creative studio that focuses on home and commercial renovations ",
@@ -118,3 +128,17 @@ export const ZabottaProjects = {
         },
     ]
 }
+
+
+export {
+    left1,
+    left2,
+    left3,
+    middle1,
+    middle2,
+    middle3,
+    right1,
+    right2,
+    right3,
+}
+

@@ -9,6 +9,7 @@ import { mainTheme } from './CustomColors';
 
 import NavbarRender from './components/Navbar';
 import HomeRender from './components/Home';
+import ProjectRender from './components/Projects';  
 import FooterRender from './components/Footer';
 
 const Container = styled.div`
@@ -36,6 +37,7 @@ const App = () => {
       <NavbarRender />
       <Container>
         <HomeRender />
+        <ProjectRender />
         <FooterRender />
       </Container>
     </ThemeProvider>
