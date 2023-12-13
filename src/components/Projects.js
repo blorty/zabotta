@@ -143,7 +143,7 @@ const ProjectPage = () => {
             </Plane>
             </ProjectWrapper>
             <ProjectTitle>
-                <ProjectHeading>Zobotta Proudly Presents</ProjectHeading>
+                <ProjectHeading>Zabotta Proudly Presents</ProjectHeading>
                 {/* <ProjectParagraph>Woodwrking Porjects</ProjectParagraph> */}
             </ProjectTitle>
         </ProjectPageContainer>
